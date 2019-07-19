@@ -5,6 +5,7 @@ class Student
   @@all = []
 
   def initialize(student_hash)
+    student_hash.ech {|k,v| self.send(("#{k}="),v)}
     
   end
 
